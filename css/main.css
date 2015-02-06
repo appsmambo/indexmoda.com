@@ -1,0 +1,506 @@
+@font-face {
+	font-family:'GothamBook';
+	src: url('../fonts/GothamBook.eot?') format('eot'), 
+		url('../fonts/GothamBook.otf')  format('opentype'),
+		url('../fonts/GothamBook.woff') format('woff'), 
+		url('../fonts/GothamBook.ttf')  format('truetype'),
+		url('../fonts/GothamBook.svg#GothamBook') format('svg');
+}
+@font-face {
+	font-family:'GothamBold';
+	src: url('../fonts/GothamBold.eot?') format('eot'), 
+		url('../fonts/GothamBold.otf')  format('opentype'),
+		url('../fonts/GothamBold.woff') format('woff'), 
+		url('../fonts/GothamBold.ttf')  format('truetype'),
+		url('../fonts/GothamBold.svg#GothamBold') format('svg');
+}
+
+/* background setup */
+.background {
+	background-repeat:no-repeat;
+	/* custom background-position */
+	background-position:50% 50%;
+	/* ie8- graceful degradation */
+	background-position:50% 50%\9 !important;
+}
+body {
+	background-image:url('../img/lookbook.png'),url('../img/fondo-lookbook.jpg');
+	background-repeat:no-repeat, no-repeat;
+	background-position:center top, center top;
+	-webkit-background-size:cover, cover;
+	-moz-background-size:cover, cover;
+	-o-background-size:cover, cover;
+	background-size:cover, cover;
+}
+/* fullscreen setup */
+html, body {
+	/* give this to all tags from html to .fullscreen */
+	height:100%
+}
+.fullscreen {
+	min-height:100%
+}
+.fullscreen.per100 {
+	width:100%
+}
+.content-a {
+	width:100%;
+	height:100%;
+    min-height:100%
+}
+.not-fullscreen,
+.not-fullscreen .content-a,
+.fullscreen.not-overflow,
+.fullscreen.not-overflow .content-a {
+    height:100%;
+    overflow:hidden
+}
+
+/* content centering styles */
+.content-a {
+	display:table
+}
+.content-b {
+	display:table-cell;
+    position:relative;
+	vertical-align:middle;
+	text-align:center
+}
+.not-fullscreen {
+	height:50%
+}
+section {
+	position:relative
+}
+a,
+.boton {
+	cursor:pointer
+}
+body, p div {
+	font-family:'GothamBook';
+	color:#000
+}
+body, #wrapper {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	display: block;
+	margin: 0;
+	padding: 0
+}
+p {
+	white-space:normal
+}
+strong {
+	font-family:'GothamBold'
+}
+label {
+	color:#000;
+	font-size:12px;
+	text-align:right;
+	width:20%
+}
+
+.rcWrapper {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	z-index: 1;
+}
+.rcWrapper ul {
+	position:absolute;
+	top:0;
+	right:0;
+	bottom:0;
+	left:0;
+	width:100%;
+	height:100%;
+	margin:0;
+	padding:0;
+	font-size:0;
+	list-style-type:none;
+	display:inline-block;
+	white-space: nowrap;
+}
+.rcWrapper ul li {
+	position:relative;
+	margin:0;
+	padding:0;
+
+	display:inline-block;
+	width:100%;
+	height:100%;
+	text-align:center;
+	overflow:hidden
+}
+.rcL, .rcR {
+	position: absolute;
+	top: 50%;
+	margin-top: -25px;
+	display: block;
+	height: 28px;
+	width: 19px;
+	z-index: 1;
+	background-size: cover
+}
+.rcL.rcHide, .rcR.rcHide {
+	display: none;
+}
+.rcL {
+	position: absolute;
+	left: 40px;
+}
+.rcR {
+	position: absolute;
+	right: 40px;
+	-webkit-transform:rotate(180deg);
+	-moz-transform:rotate(180deg);
+	-ms-transform:rotate(180deg);
+	-o-transform:rotate(180deg);
+	transform:rotate(180deg);
+}
+.rcL:hover, .rcR:hover {
+	-webkit-transition: opacity .5s linear;
+	-moz-transition: opacity .5s linear;
+	-o-transition: opacity .5s linear;
+	transition: opacity .5s linear;
+	opacity: .75;
+}
+
+header{
+	position:absolute;
+	width:245px;
+	top:20px;
+	left:20px;
+	height:auto;
+	border:0;
+	z-index:2;
+}
+header ul{
+	list-style:none;
+	margin:5px 0 0 0;
+	padding:10% 0 5% 0;
+	border:0;
+	width:100%;
+	text-align:left;
+	background:#000000;
+	display:none;
+	z-index:9
+}
+header ul li{
+	margin:0 0 3% 20px;
+	padding:0;
+	border:0;
+	font-size:19px;
+}
+header ul li a{
+	color:#ffffff;
+}
+header ul li a:hover{
+	color:#ffffff;
+	text-decoration:none;
+}
+.menu-nav{
+	height:76px;
+	width:76px;
+	border:0;
+	float:left;
+	margin:0 11px 0 0
+}
+.menu-nav:hover, .menu-nav.active{
+	background:#000000;
+}
+.icon-menu{
+	float:left;
+	display:block;
+	margin:20px 30px 0 0;
+}
+.menu-nav:hover .icono-menu-nav{
+	background:url('../img/nav-menu.png') 0 -27px;
+}
+.icono-menu-nav.active{
+	background:url('../img/nav-menu.png') 0 -27px;
+}
+.icono-menu-nav{
+	height:27px;
+	width:33px;
+	border:0;
+	background:url('../img/nav-menu.png');
+	margin:20px auto;
+}
+.control-video {
+	position:absolute;
+	top:12px;
+	right:12px;
+	padding:3px
+}
+
+footer {
+	background-color:#fff;
+	bottom:0;
+	height:67px;
+	line-height:66px;
+	position:fixed;
+	text-align:center;
+	width:100%;
+	z-index:9
+}
+
+.fondoInicio {
+	background:url('../video/fondo-360p.jpg') no-repeat center center;
+	-webkit-background-size:cover;
+	-moz-background-size:cover;
+	-o-background-size:cover;
+	background-size:cover;
+}
+.fondoVideo {
+	background:url('../img/mascara-video.jpg') no-repeat center center;
+	-webkit-background-size:cover;
+	-moz-background-size:cover;
+	-o-background-size:cover;
+	background-size:cover;
+}
+.fondoDiviertete {
+	background:url('../img/fondo-diviertete.jpg') no-repeat center top;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+.fondoDivierteteMobile {
+	background-color:#fff;
+	background-image:url('../img/fondo-diviertete-mobile.jpg');
+	background-repeat:no-repeat
+}
+.fondoLookbook {
+	background-image:none
+}
+.fondoParticipa {
+	background:url('../img/fondo-participa.jpg') no-repeat center top;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+section.container {
+	height:100%;
+	z-index:1
+}
+
+.inicio {
+	bottom:0;
+	padding-right:30px;
+	position:absolute;
+	width:100%
+}
+
+.play {
+	z-index:999
+}
+
+p.diviertete {
+	font-size:14px
+}
+p.diviertete strong {
+	color:#ff73a4
+}
+
+.participa p {
+	margin-left:85px
+}
+.participa .boton {
+	margin-bottom:15px
+}
+
+#registro {
+	padding:50px 35px;
+	width:600px
+}
+p.registra {
+	border:1px solid #000;
+	color:#000;
+	margin-bottom:20px;
+	margin-top:25px;
+	padding:7px 0;
+	letter-spacing:11px;
+	max-width: 423px;
+	text-align:center
+}
+#formRegistro {
+	width:423px
+}
+#formRegistro div {
+	overflow:hidden;
+	margin-bottom:6px
+}
+#formRegistro p {
+	font-size:12px;
+	color:#000;
+	margin:12px auto
+}
+.inputbox {
+	border:none;
+	border-top:1px solid #aaa;
+	background:#8dd0f1;
+	font-size:13px;
+	color:#fff;
+	width:76%;
+	float:right;
+	padding:2px
+}
+.error {
+	width:76%;
+	float:right;
+}
+
+.youtube-container {
+	top:0!important
+}
+
+.bloque {
+	overflow:hidden;
+	width:740px
+}
+.bloque .imagen {
+	max-width:514px
+}
+.bloque div:first-child {
+	/*width:70%*/
+}
+.bloque div:last-child {
+	/*min-height:100%;
+	width:30%*/
+}
+.bloque .degrade {
+	background-color:#fff;
+	min-height:100%;
+	width:223px
+}
+.degrade p {
+	color:#000;
+	padding:0 25px 0 16px;
+	position:absolute;
+	text-align:left;
+	font-size:13px
+}
+.degrade p.datos {
+	bottom:54px
+}
+.degrade .sociales {
+	bottom:12px;
+	z-index:9000
+}
+.sociales a {
+	text-decoration:none;
+	display:inline-block
+}
+
+.lookbook {
+	margin-top:30px
+}
+
+.altoMayor760 {
+	display:none
+}
+.fs14 {
+	font-size:14px
+}
+
+.vjs-control-bar {
+	display:none
+}
+
+/* mediaquerys */
+@media (min-height:750px) {
+	.altoMayor760 {
+		display:block
+	}
+}
+@media (orientation: landscape) and (device-aspect-ratio: 16/9) and (width:1024px) {
+	.inicio img {
+		width:83%
+	}
+}
+@media (orientation: landscape) and (device-aspect-ratio: 16/9) and (width:1264px) {
+	.inicio img {
+		width:62%
+	}
+}
+@media (orientation: landscape) and (device-aspect-ratio: 16/9) and (width:1280px) {
+	.inicio img {
+		width:62%
+	}
+}
+@media (orientation: landscape) and (device-aspect-ratio: 16/9) and (width:1350px) {
+	.inicio img {
+		width:53%
+	}
+
+}
+@media (orientation: landscape) and (device-aspect-ratio: 16/9) and (width:1366px) {
+	.inicio img {
+		width:62%
+	}
+}
+@media (orientation: landscape) and (device-aspect-ratio: 4/3) {
+	.inicio img {
+		width:80%
+	}
+}
+
+
+@media(max-width:767px){
+	header {
+		top:-5px;
+		left:0
+	}
+	footer {
+		height:40px;
+		line-height:39px
+	}
+	footer img {
+		height:20px
+	}
+	.fondoInicio .container {
+		padding:0;
+		width:100%
+	}
+	.fondoInicio .inicio {
+		padding:0
+	}
+	.prenda img {
+		width:42%
+	}
+	.lookbook {
+		margin-bottom:0;
+		margin-top:15px;
+		width:55%
+	}
+	#registro {
+		padding:50px 10px;
+		width:auto
+	}
+	#formRegistro {
+		width:345px
+	}
+	.rcL {
+		left:5px
+	}
+	.rcR {
+		right:5px
+	}
+}
+
+@media(min-width:992px){
+	.participa p {
+		margin-left:12%
+	}
+}
