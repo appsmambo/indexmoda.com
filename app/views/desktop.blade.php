@@ -79,7 +79,7 @@
 		<div class="control-video" style="display:none"><img src="{{ url() }}/img/cerrar-b.png" class="cerrar boton" alt=""></div>
 		<div id="wrapper">
 			<div id="rotame">
-				<img src="{{ url() }}/img/rotame.png" alt="Rótame, por favor.">
+				<!--img src="{{ url() }}/img/rotame.png" alt="Rótame, por favor."-->
         	</div>
 			<header>
 				<div class="menu-nav">
